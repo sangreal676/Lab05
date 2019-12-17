@@ -12,7 +12,7 @@ export class WydatkiService {
         "", 
         new Date(2018, 4, 30),
         20,
-        555
+        ''
       ),
       new Wydatek(
         "Myjnia",
@@ -37,7 +37,7 @@ export class WydatkiService {
         325.2,
         "Do pełna po urlopie",
         new Date(2017, 7, 12),
-        47.5,
+        '',
         523
       )
     ];

@@ -11,7 +11,8 @@
 		<td>{{wydatek.data | date:'dd.MM.yyyy'}}</td>
 		<td>{{wydatek.kwota | number:'1.2-2'}} zł</td>
 		<td>{{wydatek.opis}}</td>
-		<td *ngIf="wydatek.kategoria === 'Tankowanie'">
+		<td>
+      <span *ngIf="wydatek.kategoria === 'Tankowanie'">
         <ng-container *ngIf="wydatek.ileLitrow && wydatek.ileKm; else elseif1">
             {{wydatek.ileLitrow | number: '1.1'}} L / {{wydatek.ileKm}} km
         </ng-container>
@@ -21,11 +22,12 @@
           </ng-container>
         </ng-template>
         <ng-template #elseif2>
-          <ng-container *ngIf="wydatek.ileKm && !wydatek.ileLitrow; else else1">
+          <ng-container *ngIf="wydatek.ileKm && !wydatek.ileLitrow; else elsenic">
             {{wydatek.ileKm}} km
           </ng-container>
         </ng-template>
-      <ng-template #else1><td></td></ng-template>
+      <ng-template #elsenic><td></td></ng-template>
+      </span>
 		</td>
 	</tr>
 </table>
