@@ -4,7 +4,10 @@ export class Wydatek {
         public kategoria: string,
         public kwota: number,
         public opis: string,
-        public data: Date) {
+        public data: Date,
+        public ileLitrow: number = 0,
+        public ileKm: number = 0,
+        ) {
     }
 }
 

@@ -1,18 +1,9 @@
 <div class="container">
-  <h1>
-    AutoKsiegowy
-  </h1>
+	<h1>
+		AutoKsiegowy
+	</h1>
 
-  <h2>Lista wydatków</h2>
-  
+	<h2>Lista wydatków</h2>
+
+  <app-lista-wydatkow></app-lista-wydatkow>
 </div>
-
-<table class="table">
-    <tr *ngFor="let wydatek of wydatki">
-    <td>{{wydatek.kategoria}}</td>
-    <td>{{wydatek.data}}</td>
-    <td>{{wydatek.kwota}} zł</td>
-    <td>{{wydatek.opis}}</td>
-</tr>
-
-</table>
